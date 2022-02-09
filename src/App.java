@@ -1,7 +1,11 @@
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 // auto added 
 
+
+// Learning from https://www.youtube.com/watch?v=eIrMbAQSU34
+// Stopped at 1:07:29
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -89,22 +93,52 @@ public class App {
         int j = ++i;
             // i == 2 and j == 2;
             // it adds 1 to i, then assigns j == i (2)
-
         
-
-
-
         
+        // *** implicit casting ***
+        // byte --> short --> int --> long --> float --> double
+        // no data loss
+        short n = 1;
+        int m = n + 2;
+            // the short value gets converted to int
 
+        // *** explicit casting ***
+        double c = 1.1;
+        int d = (int)c + 2;
+            // float to int
+        System.out.println(d);
 
+        // *** WRAPPER CLASS ***
 
+        Integer.parseInt("1");
+        Float.parseFloat("1.1");
 
+        // *** MATH CLASS ***
 
-        
+        Math.round(1.1F); // 1
+        Math.ceil(1.1F); // 2
+        Math.floor(1.1F); // 1
+        Math.max(1, 2); // 2
+        Math.min(1, 2); // 1
+        Math.random(); // random between 0 and 1. multiply by 100
 
+        // *** NUMBER FORMAT ***
 
+        // NumberFormat currency = new NumberFormat();
+            // cant do this because abstract
 
-        
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String result = currency.format(1234567.891);
+
+        System.out.println(result);
+
+        NumberFormat percentage = NumberFormat.getPercentInstance();
+        String percentResult = percentage.format(0.1);
+        System.out.println(percentResult);
+
+        String anotherPercentResult = NumberFormat.getPercentInstance().format(0.23);
+        System.out.println(anotherPercentResult);
+
         
     }
 }
