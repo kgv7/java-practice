@@ -24,7 +24,7 @@ class MortgageCalculator {
         // String result = currency.format(1234567.891);
 
 
-        System.out.print("Mortgage: " + finalMortgage);
+        System.out.println("Mortgage: " + finalMortgage);
 
     }
 }
