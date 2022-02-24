@@ -2,10 +2,11 @@ import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 // auto added 
+import java.util.Scanner;
 
 
 // Learning from https://www.youtube.com/watch?v=eIrMbAQSU34
-// Stopped at 1:07:29
+// Stopped at 1:25:41
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -21,7 +22,7 @@ public class App {
 
         long viewsCount = 3_123_456_789L;
             // use L for "long" numbers
-
+         
         float price = 10.99F;
             // add F to represent as a float instead of double
 
@@ -138,6 +139,16 @@ public class App {
 
         String anotherPercentResult = NumberFormat.getPercentInstance().format(0.23);
         System.out.println(anotherPercentResult);
+
+        // reading input
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Age: ");
+        byte newage = scanner.nextByte();
+        // System.out.println("You are " + newage);
+
+        System.out.print("Name: ");
+        String new_name = scanner.nextLine();
+        System.out.println("You are " + new_name + " and " + age + " years old.");
 
         
     }
