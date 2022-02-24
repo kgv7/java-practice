@@ -14,17 +14,17 @@ class MortgageCalculator {
         System.out.print("Period (Years): ");
         byte years = scanner.nextByte();
 
-        float monthly_rate = (rate/100)/12;
+        float monthlyRate = (rate/100)/12;
 
-        double mortgage = principal * ( (monthly_rate * (Math.pow((1 + monthly_rate), (years * 12)))/ ((Math.pow((1 + monthly_rate), (years * 12)))-1 ) ));
+        double mortgage = principal * ( (monthlyRate * (Math.pow((1 + monthlyRate), (years * 12)))/ ((Math.pow((1 + monthlyRate), (years * 12)))-1 ) ));
 
-        NumberFormat final_mortgage = NumberFormat.getCurrencyInstance();
-        String result = final_mortgage.format(mortgage);
+        String finalMortgage = NumberFormat.getCurrencyInstance().format(mortgage);
+        // String result = finalMortgage.format(mortgage);
         // NumberFormat currency = NumberFormat.getCurrencyInstance();
         // String result = currency.format(1234567.891);
 
 
-        System.out.print("Mortgage: " + result);
+        System.out.print("Mortgage: " + finalMortgage);
 
     }
 }
