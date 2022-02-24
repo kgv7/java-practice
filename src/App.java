@@ -141,15 +141,62 @@ public class App {
         System.out.println(anotherPercentResult);
 
         // reading input
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Age: ");
-        byte newage = scanner.nextByte();
-        // System.out.println("You are " + newage);
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.print("Age: ");
+        // byte newage = scanner.nextByte();
+        // // System.out.println("You are " + newage);
 
-        System.out.print("Name: ");
-        String new_name = scanner.nextLine();
-        System.out.println("You are " + new_name + " and " + age + " years old.");
+        // System.out.print("Name: ");
+        // String new_name = scanner.nextLine();
+        // System.out.println("You are " + new_name + " and " + age + " years old.");
 
+
+        // ****COMPARISON & CONDITIONALS ******
+        
+        // || -- or
+        //  && -- and
+        // (hasIncome || hasCredit) && !criminalRecord
+        //  has either income or credit and not criminal record
+
+
+        int temp = 32;
+        if (temp > 30){
+            System.out.println("It's a hot day");
+            System.out.println("Drink water");
+        } else if (temp > 20){
+            System.out.println("Beautiful day");
+        } else {
+            System.out.println("Cold day");
+        }
+
+        // TERNARY OPERATOR
+
+        int income = 120_000;
+        String classname = income > 100_000 ? "First" : "Economy";
+        System.out.println(classname);
+
+        // SWITCH STATEMENTS
+
+        String role = "admin";
+
+        switch (role){
+            case "admin": 
+                System.out.println("You're an admin");
+                break;
+            case "moderator":
+                System.out.println("You are a mod");
+                break;
+            default:
+                System.out.println("You are a guest");
+        }
+
+        if (role == "admin"){
+            System.out.println("You're an admin");
+        } else if (role == "moderator"){
+            System.out.println("You are a mod");
+        }else {
+            System.out.println("You are a guest");
+        }
         
     }
 }
