@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 // Learning from https://www.youtube.com/watch?v=eIrMbAQSU34
-// Stopped at 1:25:41
+// Stopped at 2:06:25
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -194,10 +194,59 @@ public class App {
             System.out.println("You're an admin");
         } else if (role == "moderator"){
             System.out.println("You are a mod");
-        }else {
+        } else {
             System.out.println("You are a guest");
         }
         
+
+
+        // **** FOR LOOPS *****
+
+        for (int k = 0; k < 5; k++){
+            System.out.println("Hello World");
+        }
+
+        // **** WHILE LOOPS *****
+
+        int z = 5;
+        while (z > 0){
+            System.out.println("Hellow World");
+            z--;
+        }
+
+        String input = "";
+        Scanner scanner = new Scanner(System.in);
+
+        while (!input.equals("quit")){
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }
+
+        // ****DO WHILE LOOPS*****
+        // always executed once, even if the condition is false
+        // not used as much
+
+        // do {
+        //     System.out.print("Input: ");
+        //     input = scanner.next().toLowerCase();
+        //     System.out.println(input);
+        // } while (!input.equals("quit"));
+
+
+        // ****FOR EACH LOOP*****
+        // limitation - always forward; don't get index
+
+
+        String[] fruits = { "Apple", "Mango", "Orange" };
+
+        // for (int y = 0; y < fruits.length; y ++)
+        //     System.out.println(fruits[i])
+
+        for (String fruit : fruits)
+            System.out.println(fruit);
+
+
     }
 }
 
